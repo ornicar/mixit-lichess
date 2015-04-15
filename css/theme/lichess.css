@@ -48,14 +48,15 @@ body {
   font-weight: normal;
   line-height: 1.2;
   letter-spacing: normal;
-  text-transform: uppercase;
   text-shadow: 2px 2px 2px #222;
   word-wrap: break-word; }
 
 .reveal h1 {
+  text-transform: uppercase;
   font-size: 3.77em; }
 
 .reveal h2 {
+  text-transform: uppercase;
   font-size: 2.11em; }
 
 .reveal h3, .reveal .fat {
@@ -90,8 +91,39 @@ body {
   box-shadow: none;
 }
 
+.reveal img.diagram {
+  padding: 0 40px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.reveal .fleft {
+  float: left;
+}
+
+.reveal .black {
+  color: #444;
+  text-shadow: 2px 2px 2px #eee;
+}
+
+.reveal ul.check-list {
+    list-style: none;
+    padding: 0px;
+}
+.reveal ul.check-list li:before {
+    content: '\2713';
+    margin: 0 0.3em;
+}
+
 html.full-page-img  div.slide-background.present {
   background-position: top;
+}
+
+html.contain-img  div.slide-background.present {
+  background-size: contain;
+}
+
+html.cover-img  div.slide-background.present {
+  background-size: cover;
 }
 
 /* Ensure certain elements are never larger than the slide itself */

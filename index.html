@@ -31,20 +31,26 @@
 
       <!-- Any section element inside of this container is displayed as a slide -->
       <div class="slides">
-        <section data-transition="fade">
-          <h1>lichess.org</h1>
-          <h3>open source success story</h3>
+        <section>
+          <section>
+            <img src="image/vintage-shirt.png" class="no-border" height="600px"/>
+          </section>
+          <section>
+            <img src="image/wN.svg" class="no-border" width=200 />
+            <h1>lichess.org</h1>
+            <h4>an open source success story</h4>
+          </section>
         </section>
 
         <section data-transition="fade">
           <h3>Hi, I'm Thibault Duplessis</h3>
           <br />
-          <p>Software engineer at Zengularity</p>
+          <p>Software engineer at Zengularity*</p>
           <p>By day, I build prismic.io</p>
           <p>By night, I build lichess.org</p>
           <br />
           <br />
-          <p class="shy">Zengulary is quite awesome, by the way. You should be working there.</p>
+          <p class="shy">*Zengulary is quite awesome, by the way. You should be working there.</p>
         </section>
 
         <section>
@@ -63,6 +69,7 @@
           <section>
             <h3>634,000 unique visitors<br />per month</h3>
             <img src="image/analytics-users.png" />
+            <aside class="notes">doubling every year</aside>
           </section>
 
           <section>
@@ -72,11 +79,12 @@
           </section>
 
           <section>
+            <h3>MOAR NUMBERS</h3>
+            <br>
             <table class="fat">
               <tbody>
-                <h3>MOAR NUMBERS</h3>
                 <tr>
-                  <td class="tright">102</td>
+                  <td class="tright">100</td>
                   <td>moves per second</td>
                 </tr>
                 <tr>
@@ -95,7 +103,7 @@
         <section>
           <section>
             <h3>Funds raised:</h3>
-            <h1>$0.00</h1>
+            <h1 class="green">$0.00</h1>
           </section>
 
           <section data-background="image/crab.gif"
@@ -108,6 +116,7 @@
         <section>
           <section>
             <h1>Why?</h1>
+            <p>Yes, why not monetize that sh*t?</p>
           </section>
           <section>
             <h3>
@@ -126,17 +135,29 @@
           </section>
           <section>
             <h1>Work hard</h1>
+            <br>
             <p>Thanks for coming. Questions?</p>
           </section>
         </section>
 
         <section>
+          <section>
+            <h2>Technological advantage</h2>
+            <br>
+            <ul>
+              <li>not marketing</li>
+              <li>not communication</li>
+              <li>not the domain name</li>
+            </ul>
+          </section>
           <section data-transition="fade">
             <h2>Fight tech debt</h2>
             <br>
             <p class="fragment">Refuse the hacks</p>
-            <p class="fragment">or</p>
-            <p class="fragment">Delete your code</p>
+            <div class="fragment">
+              <p>or</p>
+              <p>Delete your code</p>
+            </div>
             <aside class="notes">
               people code fast and don't take time to refactor
             </aside>
@@ -155,37 +176,37 @@
 
           <section data-transition="fade">
             <h1>2010</h1>
-            <h3>PHP 5.2<br>symfony 1<br>&nbsp;<br>MySQL<br>good ol' JS</h3>
+            <h3>PHP 5.2<br>symfony 1<br>&nbsp;<br>MySQL<br>jQuery</h3>
           </section>
 
           <section data-transition="fade">
-            <h1>2010</h1>
-            <h3>PHP 5.3<br>symfony 1<br>Diem CMS<br>tgz<br>good ol' JS</h3>
-          </section>
-
-          <section data-transition="fade">
-            <h1>2011</h1>
-            <h3>PHP 5.3<br>Symfony 2<br>&nbsp;<br>MongoDB<br>good ol' JS</h3>
+            <h1>2010 ½</h1>
+            <h3>PHP 5.3<br>symfony 1<br>Diem CMS<br>file tgz (!)<br>jQuery</h3>
           </section>
 
           <section data-transition="fade">
             <h1>2011</h1>
-            <h3>PHP 5.3<br>Symfony 2<br>scala<br>MongoDB<br>good ol' JS</h3>
+            <h3>PHP 5.3<br>Symfony2<br>&nbsp;<br>MongoDB<br>jQuery</h3>
+          </section>
+
+          <section data-transition="fade">
+            <h1>2011 ½</h1>
+            <h3>PHP 5.3<br>Symfony2<br>scala<br>MongoDB<br>jQuery</h3>
           </section>
 
           <section data-transition="fade">
             <h1>2012</h1>
-            <h3>scala<br>Play 2.0-Alpha<br>scalaz IO<br>MongoDB<br>good ol' JS</h3>
+            <h3>scala<br>Play 2.0-Alpha<br>scalaz IO<br>MongoDB<br>jQuery</h3>
           </section>
 
           <section data-transition="fade">
             <h1>2013</h1>
-            <h3>scala<br>Play 2.x<br>concurrent.Future<br>MongoDB<br>good ol' JS</h3>
+            <h3>scala<br>Play 2.x<br>concurrent.Future<br>MongoDB<br>jQuery</h3>
           </section>
 
           <section data-transition="fade">
-            <h1>2014</h1>
-            <h3>scala<br>Play 2.x<br>concurrent.Future<br>MongoDB<br>mithril.js</h3>
+            <h2>2014 - current</h2>
+            <h3>scala<br>Play 2.x<br>concurrent.Future<br>MongoDB<br>virtual DOM (mithril.js)</h3>
           </section>
 
         </section>
@@ -202,16 +223,10 @@ package lila.game
 case class Game(
 white: Player,
 black: Player,
-clock: Option[Clock]) {
+clock: Option[Clock])
 
-  def player(color: Color) = color match {
-    case White => white
-    case Black => black
-  }
-
-  def player(playerId: String) =
-    players find (_.id == playerId)
-}
+val game = Game(carlsen, anand, None)
+game.white // carlsen
             </code></pre>
           </section>
           <section>
@@ -223,45 +238,17 @@ clock: Option[Clock]) {
               <li>Fast (yes!)</li>
             </ul>
           </section>
-          <section>
-            <h3>Immutability</h3>
-            <pre><code data-trim class="scala">
-case class User(
-name: String, // immutable
-elo : Int     // immutable
-) {
-
-  // pure function
-  def updateElo(e: Int) = copy(elo = e)
-}
-
-val user = User("Carlsen", elo = 2870) // immutable
-
-val updatedUser = carlsen.updateElo(2882)
-            </code></pre>
+          <section data-background="image/holy.jpg">
+            <h2 class="black">Functional programming</h2>
           </section>
           <section>
-            <h3>higher order functions</h3>
-            <br>
-            <div>
-              <h4>From procedural...</h4>
-              <pre><code data-trim class="scala">
-val users = new ArrayList()
-users.add(thibault)
-users.add(carlsen)
-val newUsers = new ArrayList[User]()
-for (user <- users) {
-  if (user.elo > 2000) newUsers.add(user)
-}
-            </code></pre>
-            </div>
-            <div class="fragment">
-              <h4>To functional</h4>
-              <pre><code data-trim class="scala">
-val users = List(thibault, carlsen)
-val newUsers = users filter (_.elo > 2000)
-            </code></pre>
-            </div>
+            <h2>Immutability</h2>
+            <ul>
+              <li>Expressive code</li>
+              <li>Equational reasoning</li>
+              <li>Control side effects</li>
+              <li>Laugh at race conditions</li>
+            </ul>
           </section>
           <section>
             <h2>strong static typing</h2>
@@ -269,13 +256,236 @@ val newUsers = users filter (_.elo > 2000)
               <li>Trust the types</li>
               <li>Refactor with confidence</li>
               <li>Write less tests</li>
+              <li>Less runtime errors</li>
             </ul>
           </section>
           <section data-background="image/bacon.jpg">
             <h3>But with inference!</h3>
             <pre><code data-trim class="scala">
-val bacon = "life"
+// Explicit typing
+val isBaconBackgroundNecessary: Boolean = false
+
+// Boolean type infered from the value
+val isBaconBackgroundNecessary = false
             </code></pre>
+          </section>
+          <section>
+            <p>And so is achieved code maintainability</p>
+          </section>
+        </section>
+
+        <section>
+          <section data-background="image/mongodb-logo.png">
+          </section>
+          <section>
+            <table class="fat">
+              <h3>lichess on MongoDB 2.6</h3>
+              <tbody>
+                <tr>
+                  <td class="tright">2k</td>
+                  <td>queries per second</td>
+                </tr>
+                <tr>
+                  <td class="tright">300</td>
+                  <td>writes per second</td>
+                </tr>
+                <tr>
+                  <td class="tright">124M</td>
+                  <td>documents <span class="shy">(in 53 collections)</span></td>
+                </tr>
+                <tr>
+                  <td class="tright">70GB</td>
+                  <td>of data</td>
+                </tr>
+                <tr>
+                  <td class="tright">22GB</td>
+                  <td>of indexes</td>
+                </tr>
+              </tbody>
+              <aside class="notes">Lots of transversal queries, need to load old games often</aside>
+            </table>
+          </section>
+          <section>
+            <h2>The good</h2>
+            <ul>
+              <li>Indexes</li>
+              <li>Aggregation framework</li>
+              <li>JavaScript data migrations</li>
+              <li>Data is actually stored (not in /dev/null)</li>
+            </ul>
+          </section>
+          <section>
+            <h2>The less good</h2>
+          </section>
+          <section>
+            <h3>Manual compression</h3>
+            <pre><code data-trim class="json">
+{
+  "_id": "fuzvD3cZ",
+  "c": BinData(0, "AwAAA3BFKSUAAAAA"),
+  "ca": ISODate("2015-04-11T19:52:55.428Z"),
+  "cl": BinData(0, "+GIAAVs="),
+  "is": "LUCF3PDh",
+  "mt": BinData(0, "SBQSeUZQ"),
+  "pg": BinData(0, "GxwTc6BSgG2AQ0heQF5M3oQBIg=="),
+  "ps": BinData(0, "MFAVQ2YABmYAQGAAAGYA0AAOAAAAAAwA7uzu7rAAnQs="),
+  "ra": true,
+  "s": 35,
+  "so": 1,
+  "t": 11,
+  "ua": ISODate("2015-04-12T08:28:39.890Z"),
+  "us": [
+    "cabalchess",
+    "senya9779"
+  ],
+  "wid": "cabalchess",
+  "w": true,
+  "tv": ISODate("2015-04-14T07:20:44.738Z")
+}
+</code></pre>
+            <aside class="notes">manual compression of all fields and un-indexed values</aside>
+          </section>
+          <section>
+            <h3>MongoDB 3.0 fixes it</h3>
+            <p>With the new WiredTiger storage</p>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Infrastructure</h2>
+          </section>
+          <section data-transition="fade">
+            <h2>One server...</h2>
+            <br>
+            <img src="image/server-pic.png" class="fleft no-border" />
+            <ul>
+              <li>Intel Xeon E5-1620v2 4c/8t</li>
+              <li>64 Go DDR3 ECC 1600MHz</li>
+              <li>160 Go SSD</li>
+              <li>1 Gbps</li>
+              <li>$130 per month</li>
+            </ul>
+          </section>
+          <section data-transition="fade">
+            <h2>... does it all</h2>
+            <br>
+            <img src="image/server-pic.png" class="fleft no-border" />
+            <ul class="check-list">
+              <li>scala application</li>
+              <li>MongoDB</li>
+              <li>Elasticsearch</li>
+              <li>nginx</li>
+              <li>monitoring</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Someone said redundancy?</h3>
+            <br>
+            <p>You're right, there isn't</p>
+            <p>Keeping things simple and cheap</p>
+            <p>Free service can fail</p>
+            <p>It worked so far, Insha'Allah</p>
+          </section>
+          <section>
+            <h3>Uptime this year</h3>
+            <h1>99.92%</h1>
+            <aside class="notes">not an impressive number. redundancy may reduce downtime, but so does simplicity</aside>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Distributing processing</h2>
+            <h3>of artificial intelligence</h3>
+          </section>
+          <section>
+            <h3>Chess A.I. are CPU hogs</h3>
+            <p>Players want A.I. games and analysis</p>
+            <aside class="notes">mention stockfish</aside>
+          </section>
+          <section>
+            <h3>Community to the rescue!</h3>
+            <p>8 servers donated to the A.I. cluster</p>
+            <aside class="notes">mention WebEnabled, Zengularity, people servers and home computers</aside>
+          </section>
+          <section>
+            <img src="image/ai-balancer.svg" height=400 class="diagram" />
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Keep it running</h2>
+            <br>
+            <p>understand why it fails</p>
+          </section>
+          <section data-background="image/monitor.jpg"
+            data-state="contain-img">
+          </section>
+          <section>
+            <h2>munin</h2>
+            <div class="fragment">
+              <p>Monitor JVM garbage collection</p>
+              <img src="image/jvm-old.png" height=400 />
+            </div>
+          </section>
+          <section>
+            <h2>munin</h2>
+            <p>Write custom plugins</p>
+            <img src="image/mps.png" height=400 />
+          </section>
+          <section>
+            <h2>health-check scripts</h2>
+            <p>That wake you up at night</p>
+            <pre><code data-trim class="javascript">
+var addFail = function(v) {
+  fail += v;
+  if (fail >= failAlert) {
+    sendSms('fail = ' + fail);
+    fail = 0;
+  }
+};
+            </code></pre>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Keep it fast</h2>
+          </section>
+          <section>
+            <h2>Backend speed</h2>
+            <br>
+            <pre><code>
+root@lichess-main# siege en.lichess.org
+** Preparing 15 concurrent users for battle.
+
+Availability:                 100.00 %
+Response time:                  0.00 secs
+            </code></pre>
+            <br>
+            <p>Monitor it!</p>
+            <aside class="notes">Refuse to implement slow features, cache stuff
+            </section>
+            <section>
+              <h2>Frontend speed</h2>
+              <img src="image/speed.jpg" width="900" class="no-border" />
+              <aside class="notes">keep nb requests low, use small JS libs, use cloudflare free CDN</aside>
+            </section>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>Community</h1>
+            <p>One can't do it alone!</p>
+          </section>
+          <section>
+            <h2>Translations</h2>
+            <img src="image/language.jpg" />
+          </section>
+          <section>
+            <h2>Translations</h2>
+            <img src="image/language2.jpg" />
+            <aside class="notes">contexts written by community in a wiki</aside>
           </section>
         </section>
 
@@ -291,12 +501,14 @@ val bacon = "life"
       // Full list of configuration options available at:
         // https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
-        controls: true,
-        progress: true,
+        controls: false,
+        progress: false,
         history: true,
         center: true,
+        loop: true,
 
         transition: 'slide', // none/fade/slide/convex/concave/zoom
+        transitionSpeed: 'fast',
 
         // Optional reveal.js plugins
         dependencies: [

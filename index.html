@@ -76,13 +76,14 @@
           <section>
             <h3>634,000 unique visitors<br />per month</h3>
             <img src="image/analytics-users.png" />
+            <p>Doubling every year</p>
             <aside class="notes">doubling every year</aside>
           </section>
 
           <section>
             <h3>Ranked <strong>12,586</strong> on Alexa</h3>
             <img src="image/alexa.png" />
-            <h4 class="fragment"><br />second most popular chess website</h4>
+            <h4><br />second most popular chess website</h4>
           </section>
 
           <section>
@@ -204,7 +205,7 @@
 
           <section data-transition="fade">
             <h1>2012</h1>
-            <h3>scala<br>Play 2.0-Alpha<br>scalaz IO<br>MongoDB<br>jQuery</h3>
+            <h3>scala<br>Play 2.0-Alpha<br>IO monad<br>MongoDB<br>jQuery</h3>
           </section>
 
           <section data-transition="fade">
@@ -217,6 +218,11 @@
             <h3>scala<br>Play 2.x<br>concurrent.Future<br>MongoDB<br>virtual DOM (mithril.js)</h3>
           </section>
 
+          <section>
+            <h2>poor competition</h2>
+            <h3>is lagging behind</h3>
+            <p>stuck with aging codebases</p>
+          </section>
         </section>
 
         <section>
@@ -283,8 +289,19 @@ val isBaconBackgroundNecessary: Boolean = false
 val isBaconBackgroundNecessary = false
             </code></pre>
           </section>
+
           <section>
-            <p>And so is achieved code maintainability</p>
+            <p>Functional programming</p>
+            <p>+</p>
+            <p>Strong static typing</p>
+            <p>=</p>
+            <p>Code maintainability</p>
+          </section>
+
+          <section>
+            <h2>poor competition</h2>
+            <h3>is lagging behind</h3>
+            <p>stuck with "dynamic", dysfunctional languages</p>
           </section>
         </section>
 
@@ -309,11 +326,11 @@ val isBaconBackgroundNecessary = false
                 </tr>
                 <tr>
                   <td class="tright">70GB</td>
-                  <td>of data</td>
+                  <td>of <span class="shy">(compressed)</span> data</td>
                 </tr>
                 <tr>
                   <td class="tright">22GB</td>
-                  <td>of indexes</td>
+                  <td>of indexes <span class="shy">(in RAM)</span></td>
                 </tr>
               </tbody>
               <aside class="notes">Lots of transversal queries, need to load old games often</aside>
@@ -335,6 +352,11 @@ val isBaconBackgroundNecessary = false
             <h3>No schema</h3>
             <p>No guaranty that data is well formed</p>
             <p>Better used with well typed language?</p>
+          </section>
+          <section>
+            <h3>No "JOIN"</h3>
+            <p>Queries operate on a single collection</p>
+            <p>Relations are implemented on application side</p>
           </section>
           <section>
             <h3>Manual compression</h3>
@@ -363,6 +385,7 @@ val isBaconBackgroundNecessary = false
   "tv": ISODate("2015-04-14T07:20:44.738Z")
 }
 </code></pre>
+            <p>one game = 570 bytes</p>
             <aside class="notes">manual compression of all fields and un-indexed values</aside>
           </section>
           <section>
@@ -445,6 +468,7 @@ val isBaconBackgroundNecessary = false
             <div class="fragment">
               <p>Monitor JVM garbage collection</p>
               <img src="image/jvm-old.png" height=400 />
+              <p>If old gen minimum goes up, you're screwed</p>
             </div>
           </section>
           <section>
@@ -482,186 +506,215 @@ Availability:                 100.00 %
 Response time:                  0.00 secs
             </code></pre>
             <br>
-            <p>Monitor it!</p>
-            <aside class="notes">Refuse to implement slow features, cache stuff
-            </section>
-            <section>
-              <h2>Frontend speed</h2>
-              <img src="image/speed.jpg" width="1200" class="no-border" />
-              <aside class="notes">keep nb requests low, use small JS libs, use cloudflare free CDN</aside>
-            </section>
+            <p>Monitor it to spot perf regressions</p>
+            <aside class="notes">you can hardly guess what will be slow while coding, only production will tell</aside>
+          </section>
+          <section>
+            <h2>Frontend speed</h2>
+            <img src="image/speed.jpg" width="1200" class="no-border" />
+            <ul>
+              <li>Make less requests</li>
+              <li>Use a CDN</li>
+              <li>Pick small JS libraries</li>
+            </ul>
+            <aside class="notes">keep nb requests low, use small JS libs, use cloudflare free CDN</aside>
           </section>
         </section>
+      </section>
 
+      <section>
         <section>
-          <section>
-            <img src="image/mobile.png" class="no-border fleft" height=500 />
-            <h2>Go mobile</h2>
-            <br>
-            <p>Free, open source, no ads</p>
-            <p>Community driven</p>
-            <p>But native dev sucks...</p>
-          </section>
-          <section>
-            <h2>Cordova + tarifa</h2>
-            <br>
-            <p>HTML / CSS / JS / virtual DOM</p>
-            <p>Reuse website frontend code</p>
-            <p>Build once, run on Android &amp; iOS</p>
-            <br>
-            <a href="https://github.com/veloce/lichobile">https://github.com/veloce/lichobile</a>
-          </section>
+          <img src="image/mobile.png" class="no-border fleft" height=500 />
+          <h2>Mobile App!</h2>
+          <br>
+          <p>Free, open source, no ads</p>
+          <p>Community driven</p>
+          <p>But native dev sucks...</p>
         </section>
+        <section>
+          <h2>Cordova + tarifa</h2>
+          <br>
+          <p>HTML / CSS / JS / virtual DOM</p>
+          <p>Reuse website frontend code</p>
+          <p>Build once, run on Android &amp; iOS</p>
+          <br>
+          <a href="https://github.com/veloce/lichobile">https://github.com/veloce/lichobile</a>
+        </section>
+      </section>
 
+      <section>
         <section>
-          <section>
-            <h1>Community</h1>
-            <p>#lichess on freenode</p>
-          </section>
+          <h1>Community</h1>
+          <p>put dem users to work!</p>
+          <aside class="notes">Great deal of fun. "Meet" awesome people. Magic of disinterestment and dedication</aside>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h2>Translations</h2>
+          <img src="image/language.jpg" />
         </section>
         <section>
-          <section>
-            <h2>Translations</h2>
-            <img src="image/language.jpg" />
-          </section>
-          <section>
-            <h2>Translations</h2>
-            <img src="image/language2.jpg" />
-            <aside class="notes">contexts written by community in a wiki</aside>
-          </section>
-          <section>
-            <h2>Translations</h2>
-            <br>
-            <ul>
-              <li>14k contributions</li>
-              <li>80 languages</li>
-              <li>including 1337 and Latin</li>
-            </ul>
-          </section>
-          <section data-background="image/network.gif"
-            data-state="full-page-img">
-          </section>
+          <h2>Translations</h2>
+          <img src="image/language2.jpg" />
+          <aside class="notes">contexts written by community in a wiki</aside>
+          <p>Provide contexts</p>
+        </section>
+        <section data-background="image/network.gif"
+          data-state="full-page-img">
+          <aside class="notes">
+            14k contributions
+            80 languages
+            including 1337 and Latin
+          </aside>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h2>Code contributions</h2>
+          <br>
+          <p>Open source service</p>
+          <p>!=</p>
+          <p>Open source library</p>
+          <aside class="notes">You wake up at night when something's wrong</aside>
         </section>
         <section>
-          <section>
-            <h2>Hosting contributions</h2>
-            <ul>
-              <li>Many people have idle CPUs</li>
-              <li>Non-sensitive data only</li>
-              <li>Servers come and go</li>
-            </ul>
-          </section>
+          <h2>Filter contributors</h2>
+          <p>Bad contributors have a negative impact</p>
         </section>
         <section>
-          <section>
-            <h2>Code contributions</h2>
-          </section>
-          <section>
-            <h3>Filter contributors</h3>
-            <ul>
-              <li>Experienced</li>
-              <li>Autonomous</li>
-              <li>Involved</li>
-            </ul>
-            <aside class="notes">
-              pick 2. If 3, make sure they stay
-              involved into the project good health
-            </aside>
-          </section>
-          <section>
-            <h3>Filter contributions</h3>
-            <br>
-            <p>Someone codes a nice feature</p>
-            <p>-&gt; You get to maintain it</p>
-          </section>
-          <section>
-            <h2>Bugfix &gt; Feature</h2>
-            <aside class="notes">
-              I love devs who accomplish boring tasks, it shows deep involvment
-              People who just have fun coding a feature are unlikely to maintain it so I'm less impressed
-            </aside>
-          </section>
-          <section>
-            <h2>Guide new contributors</h2>
-            <ul>
-              <li>Motivating/fun features</li>
-              <li>Quick wins</li>
-              <li>Let them scratch their itch</li>
-            </ul>
-          </section>
-          <section>
-            <h2>Watch out for</h2>
-            <ul>
-              <li>Perfs cost</li>
-              <li>Complexity cost</li>
-              <li>Big picture</li>
-            </ul>
-          </section>
+          <h2>1. Experience</h2>
         </section>
         <section>
-          <section>
-            <h2>Design contributions</h2>
-            <ul>
-              <li>lots of crap</li>
-              <li>people get emotional</li>
-              <li>stick with few great contributors</li>
-            </ul>
-          </section>
+          <h2>2. Autonomy</h2>
         </section>
         <section>
-          <section>
-            <h2>Common pitfalls</h2>
-          </section>
-          <section>
-            <h3>Beware of talkers</h3>
-            <br>
-            <p>They may never get to do anything</p>
-          </section>
-          <section>
-            <h3>The stamp effect</h3>
-            <br>
-            <p>People want to impact the project</p>
-          </section>
+          <h2>3. Involvement</h2>
         </section>
         <section>
-          <section>
-            <h3>Give up control</h3>
-            <ul>
-              <p>Distribute responsibilities</p>
-              <p>Focus on what you do best</p>
-            </ul>
-          </section>
-          <section data-background="image/bus.jpg"
-            data-state="transparent">
-            <h2>Bus factor</h2>
-            <p><i>
-                Number of key developers who would need to be incapacitated to make a project unable to proceed
-            </i></p>
-          </section>
-          <section>
-            <h3>lichess needs a dictator</h3>
-            <br>
-            <ul>
-              <li>Cut the crap</li>
-              <li>Take unpopular decisions</li>
-              <li>Prevent paralysis</li>
-            </ul>
-          </section>
+          <h3>Filter contributions</h3>
+          <br>
+          <p>Someone codes a nice feature</p>
+          <p>-&gt; <strong>You</strong> get to maintain it</p>
         </section>
         <section>
-          <h1>Have fun!</h1>
+          <h2>Bugfix &gt; Feature</h2>
+          <p>Do boring things, and I'll love you</p>
+          <aside class="notes">
+            I love devs who accomplish boring tasks, it shows deep involvment
+            People who just have fun coding a feature are unlikely to maintain it so I'm less impressed
+          </aside>
         </section>
-      </div>
-
+        <section>
+          <h3>Pick a few promising talents</h3>
+          <ul>
+            <li>Teach them</li>
+            <li>Give them motivating/fun features</li>
+            <li>Let them scratch their itch</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Watch out for</h2>
+          <ul>
+            <li>Perfs cost</li>
+            <li>Complexity cost</li>
+            <li>Assume only you get the big picture</li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h2>Design contributions</h2>
+          <ul>
+            <li>lots of crap</li>
+            <li>people get emotional</li>
+            <li>stick with few great contributors</li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h2>Common pitfalls</h2>
+        </section>
+        <section>
+          <h3>Beware of talkers</h3>
+          <br>
+          <p>They may never get to do anything</p>
+          <p>They waste doers time</p>
+        </section>
+        <section>
+          <h3>The stamp effect</h3>
+          <br>
+          <p>People want to impact the project</p>
+          <p>Just because it looks like they can</p>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h3>Give up control</h3>
+          <ul>
+            <p>Distribute responsibilities</p>
+            <p>Focus on what you do best</p>
+          </ul>
+        </section>
+        <section data-background="image/bus.jpg"
+          data-state="transparent">
+          <h2>Bus factor</h2>
+          <p class="fragment"><i>
+              Number of key developers who would need to be incapacitated to make a project unable to proceed
+          </i></p>
+        </section>
+        <section>
+          <h3>The need for a dictator</h3>
+          <br>
+          <ul>
+            <li>Cut the crap</li>
+            <li>Take unpopular decisions</li>
+            <li>Prevent paralysis</li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h2>Prepare to</h2>
+          <h2>Deal with arseholes</h2>
+        </section>
+        <section>
+          <h2>DDoS attacks</h2>
+          <ul>
+            <li>Let the hosting company deal with it</li>
+            <li>Tweak iptables and kernel network config</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Applicative attacks</h2>
+          <ul>
+            <li>Yay, people actually read my code!</li>
+            <li>Free security audit \o/</li>
+            <li>Wake up at night D:</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Stupid cheats</h2>
+          <p>In chess, cheat is a big deal</p>
+          <p>Automate the whole detection/ban process</p>
+        </section>
+        <section>
+          <h2>Smart cheats</h2>
+          <p>Cheat automation</p>
+        </section>
+      </section>
     </div>
 
-    <script src="lib/js/head.min.js"></script>
-    <script src="js/reveal.js"></script>
+  </div>
 
-    <script>
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.js"></script>
 
-      // Full list of configuration options available at:
-        // https://github.com/hakimel/reveal.js#configuration
+  <script>
+
+    // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
         controls: false,
         progress: false,
@@ -683,7 +736,7 @@ Response time:                  0.00 secs
         ]
       });
 
-    </script>
+  </script>
 
-  </body>
+</body>
 </html>

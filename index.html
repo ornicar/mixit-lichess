@@ -40,6 +40,7 @@
             <h1>lichess.org</h1>
             <h4>an open source success story</h4>
           </section>
+          <aside class="notes">not *the* way to do things, just what worked for me</aside>
         </section>
 
         <section data-transition="fade">
@@ -55,10 +56,13 @@
 
         <section>
           <section
+            data-background="image/exception.png"
+            data-state="full-page-img">
+          </section>
+          <section
             data-background="image/homepage.png"
             data-state="full-page-img">
           </section>
-
           <section
             data-background="image/menu.png"
             data-state="full-page-img">
@@ -67,13 +71,16 @@
 
         <section>
           <section>
+            <h1>Numbers!</h1>
+          </section>
+          <section>
             <h3>634,000 unique visitors<br />per month</h3>
             <img src="image/analytics-users.png" />
             <aside class="notes">doubling every year</aside>
           </section>
 
           <section>
-            <h3>Ranked <strong>12,595</strong> on Alexa</h3>
+            <h3>Ranked <strong>12,586</strong> on Alexa</h3>
             <img src="image/alexa.png" />
             <h4 class="fragment"><br />second most popular chess website</h4>
           </section>
@@ -84,7 +91,7 @@
             <table class="fat">
               <tbody>
                 <tr>
-                  <td class="tright">100</td>
+                  <td class="tright">102</td>
                   <td>moves per second</td>
                 </tr>
                 <tr>
@@ -95,6 +102,10 @@
                   <td class="tright">67,000,000</td>
                   <td>games in the DB</td>
                 </tr>
+                <!-- <tr> -->
+                <!--   <td class="tright">3,400,000</td> -->
+                <!--   <td>computer analysed games <span class="shy">(100,000 CPU hours)</span></td> -->
+                <!-- </tr> -->
               </tbody>
             </table>
           </section>
@@ -144,11 +155,8 @@
           <section>
             <h2>Technological advantage</h2>
             <br>
-            <ul>
-              <li>not marketing</li>
-              <li>not communication</li>
-              <li>not the domain name</li>
-            </ul>
+            <p><s>marketing</s></p>
+            <p><u>features</u></p>
           </section>
           <section data-transition="fade">
             <h2>Fight tech debt</h2>
@@ -324,8 +332,14 @@ val isBaconBackgroundNecessary = false
             <h2>The less good</h2>
           </section>
           <section>
+            <h3>No schema</h3>
+            <p>No guaranty that data is well formed</p>
+            <p>Better used with well typed language?</p>
+          </section>
+          <section>
             <h3>Manual compression</h3>
             <pre><code data-trim class="json">
+// one game
 {
   "_id": "fuzvD3cZ",
   "c": BinData(0, "AwAAA3BFKSUAAAAA"),
@@ -419,25 +433,6 @@ val isBaconBackgroundNecessary = false
         </section>
         <section>
           <section>
-            <img src="image/mobile.png" class="no-border fleft" height=500 />
-            <h2>Go mobile</h2>
-            <br>
-            <p>Free, open source, no ads</p>
-            <p>Community driven</p>
-            <p>But native dev sucks...</p>
-          </section>
-          <section>
-            <h2>Cordova + tarifa</h2>
-            <br>
-            <p>HTML / CSS / JS / virtual DOM</p>
-            <p>Reuse website frontend code</p>
-            <p>Build once, run on Android &amp; iOS</p>
-            <br>
-            <a href="https://github.com/veloce/lichobile">https://github.com/veloce/lichobile</a>
-          </section>
-        </section>
-        <section>
-          <section>
             <h2>Keep it running</h2>
             <br>
             <p>understand why it fails</p>
@@ -500,6 +495,26 @@ Response time:                  0.00 secs
 
         <section>
           <section>
+            <img src="image/mobile.png" class="no-border fleft" height=500 />
+            <h2>Go mobile</h2>
+            <br>
+            <p>Free, open source, no ads</p>
+            <p>Community driven</p>
+            <p>But native dev sucks...</p>
+          </section>
+          <section>
+            <h2>Cordova + tarifa</h2>
+            <br>
+            <p>HTML / CSS / JS / virtual DOM</p>
+            <p>Reuse website frontend code</p>
+            <p>Build once, run on Android &amp; iOS</p>
+            <br>
+            <a href="https://github.com/veloce/lichobile">https://github.com/veloce/lichobile</a>
+          </section>
+        </section>
+
+        <section>
+          <section>
             <h1>Community</h1>
             <p>One can't do it alone!</p>
           </section>
@@ -540,6 +555,47 @@ Response time:                  0.00 secs
         <section>
           <section>
             <h2>Code contributions</h2>
+          </section>
+          <section>
+            <h3>Filter contributors</h3>
+            <ul>
+              <li>Experienced</li>
+              <li>Autonomous</li>
+              <li>Involved</li>
+            </ul>
+            <aside class="notes">
+              pick 2. If 3, make sure they stay
+              involved into the project good health
+            </aside>
+          </section>
+          <section>
+            <h3>Filter contributions</h3>
+            <br>
+            <p>Someone codes a nice feature</p>
+            <p>-&gt; You get to maintain it</p>
+          </section>
+          <section>
+            <h2>Bugfix &gt; Feature</h2>
+            <aside class="notes">
+              I love devs who accomplish boring tasks, it shows deep involvment
+              People who just have fun coding a feature are unlikely to maintain it so I'm less impressed
+            </aside>
+          </section>
+          <section>
+            <h2>Guide new contributors</h2>
+            <ul>
+              <li>Motivating/fun features</li>
+              <li>Quick wins</li>
+              <li>Let them scratch their itch</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Watch out for</h2>
+            <ul>
+              <li>Perfs cost</li>
+              <li>Complexity cost</li>
+              <li>Big picture</li>
+            </ul>
           </section>
         </section>
 

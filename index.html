@@ -38,7 +38,7 @@
           <section>
             <img src="image/wN.svg" class="no-border" width=200 />
             <h1>lichess.org</h1>
-            <h4>an open source success story</h4>
+            <h4>an open source service</h4>
           </section>
           <aside class="notes">not *the* way to do things, just what worked for me</aside>
         </section>
@@ -117,6 +117,8 @@
             <h3>Funds raised:</h3>
             <h1 class="green">$0.00</h1>
           </section>
+          <section data-background="image/free.png">
+          </section>
 
           <section data-background="image/crab.gif"
             data-state="full-page-img">
@@ -145,19 +147,12 @@
           <section data-background="image/how.jpg">
             <h1>How?</h1>
           </section>
-          <section>
-            <h1>Work hard</h1>
-            <br>
-            <p>Thanks for coming. Questions?</p>
-          </section>
         </section>
 
         <section>
           <section>
-            <h2>Technological advantage</h2>
-            <br>
-            <p><s>marketing</s></p>
-            <p><u>features</u></p>
+            <img src="image/crappy-car.jpg" width="80%" />
+            <h3>Technological domination</h3>
           </section>
           <section data-transition="fade">
             <h2>Fight tech debt</h2>
@@ -169,17 +164,6 @@
             </div>
             <aside class="notes">
               people code fast and don't take time to refactor
-            </aside>
-          </section>
-
-          <section data-transition="fade">
-            <h2>Fight tech debt</h2>
-            <br>
-            <p>Refuse the hacks</p>
-            <p><s>or</s> AND</p>
-            <p>Delete your code</p>
-            <aside class="notes">
-              Scale in complexity, more features without code bloat
             </aside>
           </section>
 
@@ -219,8 +203,8 @@
           </section>
 
           <section>
+            <img src="image/skel.jpg" class="fleft" width="37%"/>
             <h2>poor competition</h2>
-            <h3>is lagging behind</h3>
             <p>stuck with aging codebases</p>
           </section>
         </section>
@@ -235,9 +219,9 @@
 package lila.game
 
 case class Game(
-white: Player,
-black: Player,
-clock: Option[Clock])
+  white: Player,
+  black: Player,
+  clock: Option[Clock])
 
 val game = Game(carlsen, anand, None)
 game.white // carlsen
@@ -249,7 +233,7 @@ game.white // carlsen
               <li>Portable</li>
               <li>Compatible</li>
               <li>Safe</li>
-              <li>Fast (yes!)</li>
+              <li>Fast</li>
             </ul>
           </section>
           <section>
@@ -299,9 +283,10 @@ val isBaconBackgroundNecessary = false
           </section>
 
           <section>
+            <img src="image/sad-cookie.jpg" class="fleft" />
             <h2>poor competition</h2>
             <h3>is lagging behind</h3>
-            <p>stuck with "dynamic", dysfunctional languages</p>
+            <p>stuck with "dynamic",<br>dysfunctional languages</p>
           </section>
         </section>
 
@@ -437,7 +422,8 @@ val isBaconBackgroundNecessary = false
         </section>
         <section>
           <section>
-            <h2>Distributing processing</h2>
+            <img src="image/hal.png" class="no-border" width="30%" />
+            <h3>Distributing processing</h3>
             <h3>of artificial intelligence</h3>
           </section>
           <section>
@@ -561,7 +547,7 @@ Response time:                  0.00 secs
           <p>Provide contexts</p>
         </section>
         <section data-background="image/network.gif"
-          data-state="full-page-img">
+          data-state="full-page-img centered">
           <aside class="notes">
             14k contributions
             80 languages
@@ -579,17 +565,17 @@ Response time:                  0.00 secs
           <aside class="notes">You wake up at night when something's wrong</aside>
         </section>
         <section>
-          <h2>Filter contributors</h2>
+          <img src="image/jarjar.jpg" width="60%" />
+          <h3>Filter contributors</h3>
           <p>Bad contributors have a negative impact</p>
         </section>
         <section>
-          <h2>1. Experience</h2>
-        </section>
-        <section>
-          <h2>2. Autonomy</h2>
-        </section>
-        <section>
-          <h2>3. Involvement</h2>
+          <h2>Good contributor</h2>
+          <ol>
+            <li>Experience</li>
+            <li>Autonomy</li>
+            <li>Involvment</li>
+          </ol>
         </section>
         <section>
           <h3>Filter contributions</h3>
@@ -600,6 +586,7 @@ Response time:                  0.00 secs
         <section>
           <h2>Bugfix &gt; Feature</h2>
           <p>Do boring things, and I'll love you</p>
+          <img src="image/miner.jpg" width="60%" />
           <aside class="notes">
             I love devs who accomplish boring tasks, it shows deep involvment
             People who just have fun coding a feature are unlikely to maintain it so I'm less impressed
@@ -653,16 +640,14 @@ Response time:                  0.00 secs
         <section>
           <h3>Give up control</h3>
           <ul>
-            <p>Distribute responsibilities</p>
-            <p>Focus on what you do best</p>
+            <li>Distribute responsibilities</li>
+            <li>Build up human shields</li>
+            <li>Focus on what you do best</li>
           </ul>
         </section>
-        <section data-background="image/bus.jpg"
-          data-state="transparent">
+        <section>
+          <img src="image/bus.jpg" width="80%"/>
           <h2>Bus factor</h2>
-          <p class="fragment"><i>
-              Number of key developers who would need to be incapacitated to make a project unable to proceed
-          </i></p>
         </section>
         <section>
           <h3>The need for a dictator</h3>
@@ -695,8 +680,12 @@ Response time:                  0.00 secs
           </ul>
         </section>
         <section>
+          <h2>Cheating</h2>
+          <p>The holy rating</p>
+        </section>
+        <section>
           <h2>Stupid cheats</h2>
-          <p>In chess, cheat is a big deal</p>
+          <p>Poor things copy-paste moves from an engine</p>
           <p>Automate the whole detection/ban process</p>
         </section>
         <section>
